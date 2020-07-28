@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
+
+		<!-- css -->
+		<link rel="stylesheet" href="css/styles.css" />
+		<!-- font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+			crossorigin="anonymous"
+		/>
+		<!-- google fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>PDF Viewer</title>
+	</head>
+	<body>
+		<div class="top-bar">
+			<div class="pages">
+				<button class="btn" id="prev-page">
+					<i class="fa fa-arrow-circle-left"></i> Prev Page
+				</button>
+				<button class="btn" id="next-page">
+					Next Page <i class="fa fa-arrow-circle-right"></i>
+				</button>
+				<span class="page-info">
+					Page <span id="page-num"></span>/<span
+						id="page-count"
+					></span>
+				</span>
+			</div>
+			<div class="zoom">
+				<label for="files" class="btn">Select PDF</label>
+				<input
+					type="file"
+					class="url"
+					id="files"
+					style="visibility: hidden;"
+				/>
+				<button class="btn minus">
+					<i class="fa fa-search-minus"></i>
+				</button>
+				<button class="btn plus">
+					<i class="fa fa-search-plus"></i>
+				</button>
+			</div>
+		</div>
+
+		<canvas id="pdf-render"></canvas>
+		<!-- pdf.js  -->
+		<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+		<!-- main js -->
+		<script src="js/main.js"></script>
+	</body>
+</html>
